@@ -1,0 +1,32 @@
+#include "Geometry.h"
+
+namespace sg {
+
+Geometry::Geometry()
+{
+}
+
+Geometry::~Geometry()
+{
+}
+
+void Geometry::setMaterial(Material* material) {
+	this->material = material;	
+}
+
+Material* Geometry::getMaterial() {
+	return material;	
+}
+
+void Geometry::drawWithMaterial() {
+	if(material != NULL) {
+		material->apply();
+	}
+	draw();
+}
+
+void Geometry::accept(Traverser& t) {
+	t.visit(this);	
+}
+
+}

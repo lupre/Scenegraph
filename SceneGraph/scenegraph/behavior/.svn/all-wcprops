@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/htramber/!svn/ver/92/lukas/ScenegraphCPP/trunk/scenegraph/behavior
+END
+SGInput.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/htramber/!svn/ver/74/lukas/ScenegraphCPP/trunk/scenegraph/behavior/SGInput.cpp
+END
+MoveInPlane.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/htramber/!svn/ver/92/lukas/ScenegraphCPP/trunk/scenegraph/behavior/MoveInPlane.h
+END
+MoveInPlane.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/htramber/!svn/ver/74/lukas/ScenegraphCPP/trunk/scenegraph/behavior/MoveInPlane.cpp
+END
+BehaviorCore.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/htramber/!svn/ver/92/lukas/ScenegraphCPP/trunk/scenegraph/behavior/BehaviorCore.h
+END
+SGInput.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/htramber/!svn/ver/92/lukas/ScenegraphCPP/trunk/scenegraph/behavior/SGInput.h
+END
+BehaviorCore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/htramber/!svn/ver/71/lukas/ScenegraphCPP/trunk/scenegraph/behavior/BehaviorCore.cpp
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/htramber/!svn/ver/92/lukas/ScenegraphCPP/trunk/scenegraph/traverse
+END
+RenderTraverser.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/RenderTraverser.h
+END
+CameraTraverser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/CameraTraverser.cpp
+END
+LightTraverser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/LightTraverser.cpp
+END
+RenderTraverser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/RenderTraverser.cpp
+END
+LightTraverser.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/LightTraverser.h
+END
+CameraTraverser.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/CameraTraverser.h
+END
+Traverser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/htramber/!svn/ver/104/lukas/ScenegraphCPP/trunk/scenegraph/traverse/Traverser.cpp
+END

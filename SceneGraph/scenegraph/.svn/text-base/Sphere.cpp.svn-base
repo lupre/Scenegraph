@@ -1,0 +1,17 @@
+#include "Sphere.h"
+
+namespace sg {
+	
+Sphere::Sphere()
+{
+}
+
+Sphere::~Sphere()
+{
+}
+
+void Sphere::draw() {
+	glutSolidSphere(RADIUS, S_SLICES, S_STACKS);	
+}
+
+}
