@@ -13,11 +13,12 @@ namespace sg {
     TransformTraverser::TransformTraverser(const Geometry *ref, const Geometry *obj)
     : ref(ref)
     , obj(obj)
+    , Traverser()
     {
         foundObj = false;
         foundRef = false;
-        transToObj = new Transformation();
-        invTransToRef = new Transformation();
+        //transToObj = new Transformation();
+        //invTransToRef = new Transformation();
         //memset(transMat, 0, sizeof(transMat));
         //memset(transInvMat, 0, sizeof(transInvMat));
     }
@@ -26,14 +27,14 @@ namespace sg {
     {
         ref = NULL;
         obj = NULL;
-        if (transToObj) {
+        /*if (transToObj) {
             delete transToObj;
             transToObj = NULL;
         }
         if (invTransToRef) {
             delete invTransToRef;
             invTransToRef = NULL;
-        }
+        }*/
     }
     
     void TransformTraverser::visit(Transformation *trans)
@@ -71,24 +72,24 @@ namespace sg {
     void TransformTraverser::multInvMat(GLdouble* currentTransform) {
 		glPushMatrix();
 		glLoadMatrixd(currentTransform);
-		glMultMatrixd(invTransToRef->getInvMatrix());
-		glGetDoublev(GL_MODELVIEW_MATRIX, invTransToRef->getInvMatrix());
+		glMultMatrixd(invTransToRef.getInvMatrix());
+		glGetDoublev(GL_MODELVIEW_MATRIX, invTransToRef.getInvMatrix());
 		glPopMatrix();
 	}
     
     void TransformTraverser::multMat(GLdouble* currentTransform) {
 		glPushMatrix();
-		glLoadMatrixd(transToObj->getMatrix());
+		glLoadMatrixd(transToObj.getMatrix());
 		glMultMatrixd(currentTransform);
-		glGetDoublev(GL_MODELVIEW_MATRIX, transToObj->getMatrix());
+		glGetDoublev(GL_MODELVIEW_MATRIX, transToObj.getMatrix());
 		glPopMatrix();
 	}
     
     Transformation* TransformTraverser::getTransFromRefToObj()
     {
         Transformation *ret = new Transformation();
-        ret->mult(invTransToRef->getInvMatrix());
-        ret->mult(transToObj->getMatrix());
+        ret->mult(invTransToRef.getInvMatrix());
+        ret->mult(transToObj.getMatrix());
         return ret;
     }
 }

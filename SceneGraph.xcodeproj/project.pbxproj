@@ -44,6 +44,8 @@
 		655ABFCF1351D1F00004966B /* iPhone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 655ABFCD1351D1ED0004966B /* iPhone.cpp */; };
 		655ABFE21351DE740004966B /* AnimNodding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 655ABFE01351DE730004966B /* AnimNodding.cpp */; };
 		801898E0135F50D700A955ED /* TransformTraverser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 801898DE135F50D700A955ED /* TransformTraverser.cpp */; };
+		80C7835B1369E0A6005225A9 /* ObserverGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80C783591369E0A6005225A9 /* ObserverGeometry.cpp */; };
+		80C7835F1369E940005225A9 /* Universe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80C7835D1369E93F005225A9 /* Universe.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,8 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6507EB43135B0C40004B088D /* CodeMarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CodeMarker.cpp; path = ../CodeMarker.cpp; sourceTree = "<group>"; };
-		6507EB44135B0C40004B088D /* CodeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeMarker.h; path = ../CodeMarker.h; sourceTree = "<group>"; };
+		6507EB43135B0C40004B088D /* CodeMarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CodeMarker.cpp; path = ../../CodeMarker.cpp; sourceTree = "<group>"; };
+		6507EB44135B0C40004B088D /* CodeMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CodeMarker.h; path = ../../CodeMarker.h; sourceTree = "<group>"; };
 		651FAE63135B6659000989CC /* iPhone4Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone4Model.h; sourceTree = "<group>"; };
 		651FAE6A135B7ACA000989CC /* CoordSys.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoordSys.cpp; sourceTree = "<group>"; };
 		651FAE6B135B7ACA000989CC /* CoordSys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordSys.h; sourceTree = "<group>"; };
@@ -136,6 +138,10 @@
 		655ABFE11351DE730004966B /* AnimNodding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimNodding.h; sourceTree = "<group>"; };
 		801898DE135F50D700A955ED /* TransformTraverser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformTraverser.cpp; sourceTree = "<group>"; };
 		801898DF135F50D700A955ED /* TransformTraverser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformTraverser.h; sourceTree = "<group>"; };
+		80C783591369E0A6005225A9 /* ObserverGeometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObserverGeometry.cpp; sourceTree = "<group>"; };
+		80C7835A1369E0A6005225A9 /* ObserverGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverGeometry.h; sourceTree = "<group>"; };
+		80C7835D1369E93F005225A9 /* Universe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Universe.cpp; sourceTree = "<group>"; };
+		80C7835E1369E93F005225A9 /* Universe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Universe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +177,6 @@
 		655ABF4F1350588F0004966B /* SceneGraph */ = {
 			isa = PBXGroup;
 			children = (
-				6507EB44135B0C40004B088D /* CodeMarker.h */,
-				6507EB43135B0C40004B088D /* CodeMarker.cpp */,
 				655ABFB9135059ED0004966B /* vecalg */,
 				655ABF60135059DC0004966B /* scenegraph */,
 				655ABF501350588F0004966B /* main.cpp */,
@@ -184,6 +188,8 @@
 		655ABF60135059DC0004966B /* scenegraph */ = {
 			isa = PBXGroup;
 			children = (
+				6507EB44135B0C40004B088D /* CodeMarker.h */,
+				6507EB43135B0C40004B088D /* CodeMarker.cpp */,
 				651FAE63135B6659000989CC /* iPhone4Model.h */,
 				655ABF61135059DC0004966B /* Animation.cpp */,
 				655ABF62135059DC0004966B /* Animation.h */,
@@ -235,6 +241,10 @@
 				655ABF92135059DC0004966B /* Traversation.h */,
 				655ABF93135059DC0004966B /* traverse */,
 				655ABF9C135059DC0004966B /* VCore.h */,
+				80C783591369E0A6005225A9 /* ObserverGeometry.cpp */,
+				80C7835A1369E0A6005225A9 /* ObserverGeometry.h */,
+				80C7835D1369E93F005225A9 /* Universe.cpp */,
+				80C7835E1369E93F005225A9 /* Universe.h */,
 			);
 			path = scenegraph;
 			sourceTree = "<group>";
@@ -380,6 +390,8 @@
 				6507EB45135B0C40004B088D /* CodeMarker.cpp in Sources */,
 				651FAE6C135B7ACB000989CC /* CoordSys.cpp in Sources */,
 				801898E0135F50D700A955ED /* TransformTraverser.cpp in Sources */,
+				80C7835B1369E0A6005225A9 /* ObserverGeometry.cpp in Sources */,
+				80C7835F1369E940005225A9 /* Universe.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

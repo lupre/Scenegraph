@@ -19,7 +19,7 @@ namespace sg {
     {
     public:
         TransformTraverser(const Geometry *ref, const Geometry *obj);
-        ~TransformTraverser();
+        virtual ~TransformTraverser();
         
         /**
          * This method overrides the method `visit(Transformation*)` from the class 
@@ -44,8 +44,8 @@ namespace sg {
     private:
         bool foundRef;
         bool foundObj;
-        Transformation* invTransToRef;
-        Transformation* transToObj;
+        Transformation invTransToRef;
+        Transformation transToObj;
         const Geometry* obj;
         const Geometry* ref;
         //double transMat[MAT_SIZE];

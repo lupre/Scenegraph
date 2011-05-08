@@ -59,11 +59,11 @@ namespace sg {
             for (int x=0; x<8; x++) {
                 for (int z=0; z<8; z++) {
                     // p: upper left corner of one square/bit of codeMarker. 
-                    Vector3d* p = new Vector3d(x*w, 0, z*h);
-                    Vector3d* a = new Vector3d(p->x + 0, 0.0, p->z + 0);
-                    Vector3d* b = new Vector3d(p->x + 0, 0.0, p->z + h);
-                    Vector3d* c = new Vector3d(p->x + w, 0.0, p->z + h);
-                    Vector3d* d = new Vector3d(p->x + w, 0.0, p->z + 0);
+                    Vector3d p(x*w, 0, z*h);
+                    Vector3d a(p.x + 0, 0.0, p.z + 0);
+                    Vector3d b(p.x + 0, 0.0, p.z + h);
+                    Vector3d c(p.x + w, 0.0, p.z + h);
+                    Vector3d d(p.x + w, 0.0, p.z + 0);
 
                     double col = bits[z*8+x];
                     glColor3d(col,col,col);
@@ -71,10 +71,10 @@ namespace sg {
                         continue;
                     }
                     
-                    glVertex3d(a->x, a->y, a->z);
-                    glVertex3d(b->x, b->y, b->z);
-                    glVertex3d(c->x, c->y, c->z);
-                    glVertex3d(d->x, d->y, d->z);
+                    glVertex3d(a.x, a.y, a.z);
+                    glVertex3d(b.x, b.y, b.z);
+                    glVertex3d(c.x, c.y, c.z);
+                    glVertex3d(d.x, d.y, d.z);
                 }
             }
         glEnd();

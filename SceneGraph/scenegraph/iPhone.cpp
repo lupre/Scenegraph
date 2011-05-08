@@ -20,7 +20,7 @@ using namespace std;
 
 namespace sg {
 	
-    iPhone::iPhone(char* labelStr):Geometry(labelStr)
+    iPhone::iPhone(char* labelStr):ObserverGeometry(labelStr)
     {
     }
     
@@ -33,10 +33,14 @@ namespace sg {
         double h = imagePlaneDistance;
         double w = imagePlaneDistance * 4/3.0;
         
-        Vector3d* a = new Vector3d(+h/2.0, -w/2.0, imagePlaneDistance);
-        Vector3d* b = new Vector3d(-h/2.0, -w/2.0, imagePlaneDistance);
-        Vector3d* c = new Vector3d(-h/2.0, +w/2.0, imagePlaneDistance);
-        Vector3d* d = new Vector3d(+h/2.0, +w/2.0, imagePlaneDistance);
+        //Vector3d* a = new Vector3d(+h/2.0, -w/2.0, imagePlaneDistance);
+        //Vector3d* b = new Vector3d(-h/2.0, -w/2.0, imagePlaneDistance);
+        //Vector3d* c = new Vector3d(-h/2.0, +w/2.0, imagePlaneDistance);
+        //Vector3d* d = new Vector3d(+h/2.0, +w/2.0, imagePlaneDistance);
+        Vector3d a(+h/2.0, -w/2.0, imagePlaneDistance);
+        Vector3d b(-h/2.0, -w/2.0, imagePlaneDistance);
+        Vector3d c(-h/2.0, +w/2.0, imagePlaneDistance);
+        Vector3d d(+h/2.0, +w/2.0, imagePlaneDistance);
         
         glBegin(GL_LINES);
             // Camera center line
@@ -44,30 +48,38 @@ namespace sg {
             glVertex3d(0,0,imagePlaneDistance);
             // Camera frustum lower left line
             glVertex3d(0,0,0);
-            glVertex3d(a->x, a->y, a->z);
+            //glVertex3d(a->x, a->y, a->z);
+            glVertex3d(a.x, a.y, a.z);
             // Camera frustum lower right line
             glVertex3d(0,0,0);
-            glVertex3d(b->x, b->y, b->z);
+            glVertex3d(b.x, b.y, b.z);
             // Camera frustum upper right line
             glVertex3d(0,0,0);
-            glVertex3d(c->x, c->y, c->z);
+            glVertex3d(c.x, c.y, c.z);
             // Camera frustum upper left line
             glVertex3d(0,0,0);
-            glVertex3d(d->x, d->y, d->z);
+            glVertex3d(d.x, d.y, d.z);
         
-            if (transToRemote)
-            {
-                GLdouble *matrix = transToRemote->getMatrix();
+            std::vector<GeomTrans_t>::iterator it = geomList.begin();
+            for ( ; it!=geomList.end(); it++) {
+                GLdouble *matrix = it->trans->getMatrix();
                 glVertex3d(0, 0, 0);
                 glVertex3d(matrix[12], matrix[13], matrix[14]);
             }
+                
+//            if (transToRemote)
+//            {
+//                GLdouble *matrix = transToRemote->getMatrix();
+//                glVertex3d(0, 0, 0);
+//                glVertex3d(matrix[12], matrix[13], matrix[14]);
+//            }
         glEnd();
         
         glBegin(GL_LINE_LOOP);
-            glVertex3d(a->x, a->y, a->z);
-            glVertex3d(b->x, b->y, b->z);
-            glVertex3d(c->x, c->y, c->z);
-            glVertex3d(d->x, d->y, d->z);
+            glVertex3d(a.x, a.y, a.z);
+            glVertex3d(b.x, b.y, b.z);
+            glVertex3d(c.x, c.y, c.z);
+            glVertex3d(d.x, d.y, d.z);
         glEnd();
         
         

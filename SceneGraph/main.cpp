@@ -15,8 +15,8 @@ using namespace sg;
 
 Node* root;
 long lastTime;
-Geometry* nobj;
-Geometry* nref;
+//Geometry* nobj;
+//Geometry* nref;
 
 void genARScene(Node* root){
 	// Root als Gruppe
@@ -26,7 +26,7 @@ void genARScene(Node* root){
     // iPhone
     Node* iPhoneNode = new Node();
     iPhone* iPhoneGeo = new iPhone("iPhone");
-    nref = iPhoneGeo;
+    //nref = iPhoneGeo;
     Material* iPhoneMat = new Material();
     float iPhoneColor[] = {0.2f, 0.2f, 0.2f, 0};
     iPhoneMat->getDiffuse(iPhoneColor);
@@ -62,7 +62,8 @@ void genARScene(Node* root){
     // CodeMarker
     Node* codeMarkerNode = new Node();
     CodeMarker* codeMarkerGeo = new CodeMarker("CodeMarker");
-    nobj = codeMarkerGeo;
+    //nobj = codeMarkerGeo;
+    iPhoneGeo->addGeometryForObservation(codeMarkerGeo);
     Material* codeMarkerMat = new Material();
     float codeMarkerColor[] = {0.2f, 0.2f, 0.2f, 0};
     codeMarkerMat->getDiffuse(codeMarkerColor);
@@ -476,5 +477,6 @@ int main(int argc, char** argv) {
     genARScene(root);
 	//genPerformanceTestScene(root);
 	//genPerformanceTestSceneStatic(root);
-	r.startRendering(root, nref, nobj);
+	r.startRendering(root);
+    delete root;
 }

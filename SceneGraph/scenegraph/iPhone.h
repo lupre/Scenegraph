@@ -9,13 +9,13 @@
 #ifndef IPHONE_H_
 #define IPHONE_H_
 
-#include "Geometry.h"
+#include "ObserverGeometry.h"
 
 namespace sg {
     /**
      * Concrete geometry core implementation. It represents a cube geometry. 
      */
-    class iPhone : public Geometry
+    class iPhone : public ObserverGeometry
     {
     public:
         /** Simple constructor */

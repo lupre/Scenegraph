@@ -55,6 +55,7 @@ namespace sg {
         glRotated(0, 1, 0, 0);
         gluCylinder(quad, radius, radius, height, slices, stacks);
         glPopMatrix();
+        gluDeleteQuadric(quad);
     }
     
     /*
