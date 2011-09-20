@@ -1,0 +1,17 @@
+Analyse 3d-Projektion/Kameramatrix:
+
+- vectorToBitEdges:
+    - die Koordinaten sollten alle in einer Ebene liegen, tuen sie aber nicht! -> siehe z-Werte, wenn Betrachtung senkrecht von oben!
+    - ausprobieren mit nur Vier Koordinaten
+
+- calcExtrinsicParameters:
+    - wird mit den falschen 3D-Werten aufgerufen? Ist noch unklar muss ich erst noch verstehen.
+    - ja, es wurden die falschen 3D-Werte übergeben, anstatt der Werte im CodeMarker-System wurden die Werte im IPhone-System übergeben
+
+- Änderungen; siehe Kommetare im Text
+
+- Wichtig: Beachtung der Skalierung ist wichtig! Markerkoordinaten müssen in realer Größe angegeben werden (Seitenlänge z.B. 10 cm). Genau diese Größen müssen dann in die Berechnung der extrinsischen Parameter einfließen
+
+- convertIPhonePoint3DIntoImagePoint2D überarbeiten, so dass es richtig funktioniert: auf Pixel umrechnen; Größe der Bildfläche global definieren
+
+- Rotation, wird noch falsch angewandt! -> Anscheinend falsche Vorzeichen, oder so!
